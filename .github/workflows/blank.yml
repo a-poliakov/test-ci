@@ -16,6 +16,10 @@ jobs:
         ports:
           - 9000:9000
           - 8123:8123
+    container:
+      image: ghcr.io/a-poliakov/dbt_clickhouse_lab:ci
     steps:
       - uses: actions/checkout@v3
       - run: echo "hello world!"
+      - run: dbt --version
+      - run: dbt debug --target ci
