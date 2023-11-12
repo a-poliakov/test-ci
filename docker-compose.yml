@@ -19,4 +19,4 @@ services:
     ports:
       - 8080:8080
     environment:
-      - DBT_HOST=clickhouse
+      - DBT_HOST=server

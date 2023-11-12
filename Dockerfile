@@ -13,3 +13,5 @@ RUN set -ex \
 
 # Set default directory for dbt profiles
 ENV DBT_PROFILES_DIR=.
+
+ENTRYPOINT ["tail", "-f", "/dev/null"]
