@@ -23,3 +23,6 @@ jobs:
       - run: echo "hello world!"
       - run: dbt --version
       - run: dbt debug --target ci
+      - run: dbt deps --target ci
+      - run: dbt run-operation init_s3_sources --target ci
+      - run: dbt build --target ci
